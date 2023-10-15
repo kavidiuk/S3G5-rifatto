@@ -460,10 +460,16 @@ document.body.innerHTML = "<ol id='myList'>nuovo elemento</ol>";
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 const myId = document.getElementById("myList")
+while(myList.firstChild){
+  delete myList.firstChild
+}
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+const text = document.getElementsByTagName("tr")
+for(let i =0;i<text.length;i++){
+  text[i].classList.add("test")
+}
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
